@@ -1,0 +1,1763 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yaniv</title>
+<meta name="description" content="Yaniv card game for game night: play the computer, pass one phone around, or play online with friends.">
+<meta name="theme-color" content="#0f3d2e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yaniv">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+:root {
+  --felt: #0f3d2e;
+  --felt-2: #145a41;
+  --felt-edge: #0a2b20;
+  --ink: #f4efe3;
+  --ink-dim: #b9c9bf;
+  --gold: #f2c14e;
+  --gold-ink: #2a1d00;
+  --danger: #e5675b;
+  --panel: rgba(4, 22, 16, .72);
+  --panel-line: rgba(255, 255, 255, .12);
+  --card-face: #fffdf7;
+  --card-edge: #c9c2b0;
+  --card-red: #c62f2f;
+  --card-black: #1d1d1f;
+  --back-1: #8b1e2d;
+  --back-2: #a8293a;
+  --cw: min(17.5vw, 88px);          /* hand card width */
+  --ch: calc(var(--cw) * 1.4);
+  --mw: min(7.5vw, 34px);           /* mini card width */
+  --pw: min(15vw, 76px);            /* pile/deck card width */
+  --radius: 14px;
+  --safe-t: env(safe-area-inset-top, 0px);
+  --safe-b: env(safe-area-inset-bottom, 0px);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: radial-gradient(120% 90% at 50% 40%, var(--felt-2), var(--felt) 60%, var(--felt-edge));
+  background-attachment: fixed;
+  color: var(--ink);
+  font: 16px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  -webkit-user-select: none; user-select: none;
+}
+input, select, textarea { -webkit-user-select: text; user-select: text; font: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:disabled { cursor: default; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+#app {
+  max-width: 760px; margin: 0 auto; min-height: 100%;
+  padding: calc(var(--safe-t) + 12px) 16px calc(var(--safe-b) + 16px);
+  display: flex; flex-direction: column;
+}
+
+/* ---------- generic ---------- */
+h1, h2, h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+.brand { font-size: clamp(48px, 15vw, 84px); letter-spacing: .04em; text-align: center; margin: 6vh 0 4px; text-shadow: 0 3px 0 rgba(0,0,0,.25); }
+.tag { text-align: center; color: var(--ink-dim); margin: 0 0 28px; }
+.stack { display: flex; flex-direction: column; gap: 12px; }
+.row { display: flex; gap: 8px; align-items: center; }
+.grow { flex: 1; min-width: 0; }
+.muted { color: var(--ink-dim); font-size: 14px; }
+.panel { background: var(--panel); border: 1px solid var(--panel-line); border-radius: var(--radius); padding: 16px; }
+.btn {
+  border: 0; border-radius: 12px; padding: 14px 18px; min-height: 48px;
+  background: rgba(255,255,255,.1); border: 1px solid var(--panel-line); font-weight: 600;
+}
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--gold); color: var(--gold-ink); border-color: transparent; }
+.btn.danger { background: transparent; color: var(--danger); border-color: rgba(229,103,91,.5); }
+.btn.small { min-height: 36px; padding: 6px 12px; font-size: 14px; border-radius: 10px; }
+.btn:disabled { opacity: .45; }
+.icon-btn { background: none; border: 0; padding: 8px; min-width: 44px; min-height: 44px; font-size: 22px; line-height: 1; border-radius: 10px; }
+.top-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.top-bar h2 { font-size: 22px; flex: 1; }
+label.field { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--ink-dim); }
+input[type=text], input[type=number], select {
+  background: rgba(0,0,0,.3); color: var(--ink); border: 1px solid var(--panel-line);
+  border-radius: 10px; padding: 10px 12px; min-height: 44px; font-size: 16px; width: 100%;
+}
+input.code { text-transform: uppercase; letter-spacing: .3em; font-weight: 700; text-align: center; font-size: 22px; }
+details summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+.rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.check { display: flex; gap: 8px; align-items: center; font-size: 14px; grid-column: 1 / -1; }
+.check input { width: 22px; height: 22px; }
+
+/* ---------- cards ---------- */
+.card {
+  position: relative; display: inline-block; padding: 0; border: 0; background: none;
+  width: var(--cw); aspect-ratio: 5 / 7; border-radius: calc(var(--cw) * .08);
+  box-shadow: 0 2px 6px rgba(0,0,0,.35); flex: none;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.card-svg, .card-img { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
+.card.mini { width: var(--mw); box-shadow: 0 1px 3px rgba(0,0,0,.4); }
+.card.pile { width: var(--pw); }
+.card.selected { transform: translateY(-22%); box-shadow: 0 0 0 3px var(--gold), 0 8px 16px rgba(0,0,0,.45); }
+.card.pickable { box-shadow: 0 0 0 3px var(--gold), 0 0 18px rgba(242,193,78,.7); animation: pulse 1.4s ease-in-out infinite; }
+.card.fresh { animation: drop .35s ease-out; }
+.card.new-in-hand::after { content: ""; position: absolute; inset: -3px; border-radius: inherit; box-shadow: 0 0 0 2px #7fd6ff; pointer-events: none; animation: fade 2.5s forwards; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 3px var(--gold), 0 0 4px rgba(242,193,78,.3); } }
+@keyframes drop { from { transform: translateY(-30px) scale(1.08) rotate(-4deg); opacity: 0; } }
+@keyframes fade { to { opacity: 0; } }
+.suit-r { color: #ff8a80; }
+
+/* ---------- table ---------- */
+.table { flex: 1; display: grid; grid-template-rows: auto auto 1fr auto; gap: 10px; min-height: calc(100dvh - var(--safe-t) - var(--safe-b) - 28px); }
+.table-head { display: flex; align-items: center; gap: 8px; }
+.table-head .round { flex: 1; font-weight: 600; color: var(--ink-dim); font-size: 14px; }
+
+.opponents { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.opp {
+  background: var(--panel); border: 1px solid var(--panel-line); border-radius: 12px;
+  padding: 8px 10px; min-width: 96px; flex: 1 1 96px; max-width: 180px; position: relative;
+}
+.opp.turn { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(242,193,78,.35); }
+.opp.out { opacity: .4; }
+.opp-name { font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.opp-meta { font-size: 12px; color: var(--ink-dim); display: flex; justify-content: space-between; gap: 6px; }
+.fan { display: flex; margin-top: 6px; height: calc(var(--mw) * 1.4); }
+.fan .card.mini + .card.mini { margin-left: calc(var(--mw) * -.55); }
+.known { display: flex; gap: 2px; margin-top: 4px; }
+.known .card.mini { --mw: min(6vw, 26px); }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: #6ee7a8; }
+.dot.off { background: #888; }
+.thinking::after { content: " …"; animation: blink 1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: .2; } }
+
+.center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.piles { display: flex; gap: 22px; align-items: flex-end; justify-content: center; }
+.pile-col { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.pile-label { font-size: 12px; color: var(--ink-dim); }
+.deck-stack { position: relative; }
+.deck-stack .card { --cw: var(--pw); }
+.deck-stack::before, .deck-stack::after { content: ""; position: absolute; inset: 0; border-radius: 8px; background: #6b1622; transform: translate(3px, 3px); z-index: -1; }
+.deck-stack::after { transform: translate(6px, 6px); z-index: -2; background: #4c0f18; }
+.discard-group { display: flex; }
+.discard-group .card + .card { margin-left: calc(var(--pw) * -.45); }
+.log { min-height: 42px; text-align: center; font-size: 14px; color: var(--ink-dim); max-width: 520px; }
+.log .now { color: var(--ink); font-size: 15px; }
+
+.me { background: var(--panel); border: 1px solid var(--panel-line); border-radius: 16px; padding: 10px 10px 12px; }
+.me.turn { border-color: var(--gold); }
+.me-head { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.me-head .total { font-weight: 800; font-size: 18px; color: var(--gold); }
+.hint { text-align: center; font-size: 14px; color: var(--ink); min-height: 20px; margin: 6px 0 2px; }
+.hand { display: flex; justify-content: center; padding-top: 26px; min-height: calc(var(--ch) + 26px); }
+.hand .card + .card { margin-left: calc(var(--cw) * -.12); }
+.hand.many .card + .card { margin-left: calc(var(--cw) * -.35); }
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+.actions .btn { flex: 1; }
+.btn.yaniv { font-size: 20px; letter-spacing: .06em; font-family: Georgia, serif; }
+.btn.yaniv:not(:disabled) { animation: glow 1.6s ease-in-out infinite; }
+@keyframes glow { 50% { box-shadow: 0 0 22px rgba(242,193,78,.8); } }
+
+.banner { background: var(--gold); color: var(--gold-ink); border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.banner .btn { min-height: 40px; padding: 6px 14px; }
+.banner .btn.primary { background: var(--gold-ink); color: var(--gold); }
+.offline { background: #4a2a12; color: #ffd8b0; border-radius: 10px; padding: 8px 12px; text-align: center; font-size: 14px; }
+
+/* ---------- overlays ---------- */
+.overlay {
+  position: fixed; inset: 0; z-index: 20; background: rgba(0, 10, 6, .72); backdrop-filter: blur(4px);
+  display: flex; align-items: flex-end; justify-content: center;
+  padding: 16px 16px calc(var(--safe-b) + 16px);
+}
+.sheet {
+  width: 100%; max-width: 560px; max-height: calc(100dvh - var(--safe-t) - 32px); overflow: auto;
+  background: #0c2a20; border: 1px solid var(--panel-line); border-radius: 20px; padding: 18px;
+  animation: rise .22s ease-out;
+}
+@keyframes rise { from { transform: translateY(24px); opacity: 0; } }
+.sheet h2 { font-size: 26px; margin-bottom: 6px; }
+.result-big { font-family: Georgia, serif; font-size: 34px; text-align: center; margin: 4px 0 2px; }
+.result-big.assaf { color: var(--danger); }
+.res-row { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--panel-line); }
+.res-row .cards { display: flex; gap: 2px; margin-top: 4px; flex-wrap: wrap; }
+.res-row .delta { font-weight: 700; min-width: 44px; text-align: right; }
+.res-row .score { font-weight: 800; min-width: 44px; text-align: right; font-size: 18px; }
+.res-row.win .delta { color: #6ee7a8; }
+.tagline { font-size: 12px; color: var(--gold); }
+.cover { position: fixed; inset: 0; z-index: 30; background: var(--felt); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 24px; text-align: center; }
+.cover h2 { font-size: 34px; }
+
+.code-big { font-size: 46px; letter-spacing: .25em; font-weight: 800; text-align: center; font-family: ui-monospace, Menlo, monospace; color: var(--gold); padding-left: .25em; }
+.seat { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--panel-line); }
+.seat:last-child { border-bottom: 0; }
+.pill { font-size: 12px; padding: 2px 8px; border-radius: 99px; background: rgba(255,255,255,.12); color: var(--ink-dim); }
+.pill.host { background: rgba(242,193,78,.2); color: var(--gold); }
+
+.theme-preview { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+.theme-preview .card { --cw: min(14vw, 64px); }
+.rules-text p { margin: 0 0 10px; }
+.rules-text b { color: var(--gold); }
+
+table.scores { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.scores th, table.scores td { padding: 6px 4px; text-align: right; border-bottom: 1px solid var(--panel-line); }
+table.scores th:first-child, table.scores td:first-child { text-align: left; }
+
+#toast {
+  position: fixed; left: 50%; bottom: calc(var(--safe-b) + 24px); transform: translate(-50%, 40px); opacity: 0;
+  background: #2b0f0c; color: #ffd6d1; border: 1px solid rgba(229,103,91,.6); padding: 10px 16px; border-radius: 12px;
+  z-index: 50; transition: .2s; max-width: calc(100% - 32px); text-align: center; pointer-events: none;
+}
+#toast.show { transform: translate(-50%, 0); opacity: 1; }
+
+@media (min-width: 700px) {
+  :root { --cw: 96px; --pw: 84px; --mw: 34px; }
+}
+@media (max-height: 700px) {
+  :root { --cw: min(15vw, 72px); --pw: min(13vw, 62px); }
+  .brand { margin-top: 2vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+</style>
+</head>
+<body>
+<main id="app" aria-live="polite"></main>
+<div id="toast" role="status" aria-live="assertive"></div>
+<script>
+/*
+ * Yaniv rules engine.
+ *
+ * Pure game logic with no DOM access, so the same file can run in the browser,
+ * in Node tests, and later on a server for online play (the server would own
+ * the state and clients would only send actions).
+ *
+ * State is a plain JSON-serialisable object. Every action function takes the
+ * state, validates the move, mutates the state, and returns it. Illegal moves
+ * throw a YanivError so the UI (or a server) can reject them cleanly.
+ */
+(function (root) {
+  'use strict';
+
+  var SUITS = ['S', 'H', 'D', 'C']; // spades, hearts, diamonds, clubs
+  var RANKS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; // A..K
+
+  var DEFAULT_RULES = {
+    handSize: 5,          // cards dealt to each player
+    yanivMax: 7,          // you may call Yaniv when your hand totals this or less
+    assafPenalty: 30,     // added to the caller's hand total when someone ties or beats them
+    eliminateAbove: 200,  // a score strictly above this knocks you out
+    fiftyRule: 'subtract',// landing exactly on 50/100/150...: 'subtract' 50, 'halve', or 'none'
+    minRun: 3,            // shortest same-suit run you may discard
+    slapDown: true,       // drawing a card of the rank you just discarded lets you throw it straight away
+    noYanivFirstTurn: false // if true, nobody may call Yaniv before everyone has had one turn
+  };
+
+  function YanivError(msg) { this.name = 'YanivError'; this.message = msg; this.stack = (new Error(msg)).stack; }
+  YanivError.prototype = Object.create(Error.prototype);
+
+  // ---------- cards ----------
+
+  function cardId(suit, rank) { return rankLabel(rank) + suit; }
+  function rankLabel(rank) { return ({ 1: 'A', 11: 'J', 12: 'Q', 13: 'K' })[rank] || String(rank); }
+  function cardValue(card) { return card.rank > 10 ? 10 : card.rank; }
+  function handValue(hand) { var t = 0; for (var i = 0; i < hand.length; i++) t += cardValue(hand[i]); return t; }
+
+  function newDeck() {
+    var d = [];
+    for (var s = 0; s < SUITS.length; s++)
+      for (var r = 0; r < RANKS.length; r++)
+        d.push({ id: cardId(SUITS[s], RANKS[r]), suit: SUITS[s], rank: RANKS[r] });
+    return d;
+  }
+
+  // Small seedable PRNG (mulberry32) so games and tests are reproducible.
+  function makeRng(seed) {
+    var a = seed >>> 0;
+    return function () {
+      a = (a + 0x6D2B79F5) >>> 0;
+      var t = a;
+      t = Math.imul(t ^ (t >>> 15), t | 1);
+      t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  // The RNG position is kept in state.rngState so a saved game resumes identically.
+  function rand(state) {
+    var r = makeRng(state.rngState)();
+    state.rngState = (state.rngState + 0x6D2B79F5) >>> 0;
+    return r;
+  }
+  function shuffle(state, arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(rand(state) * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  // ---------- discard validation ----------
+
+  // Returns {type:'single'|'set'|'run', cards:[sorted]} or null if not a legal discard.
+  function classifyGroup(cards, rules) {
+    rules = rules || DEFAULT_RULES;
+    if (!cards || cards.length === 0) return null;
+    if (cards.length === 1) return { type: 'single', cards: cards.slice() };
+    var sameRank = cards.every(function (c) { return c.rank === cards[0].rank; });
+    if (sameRank) return { type: 'set', cards: cards.slice() };
+    if (cards.length < rules.minRun) return null;
+    var sameSuit = cards.every(function (c) { return c.suit === cards[0].suit; });
+    if (!sameSuit) return null;
+    var sorted = cards.slice().sort(function (a, b) { return a.rank - b.rank; });
+    for (var i = 1; i < sorted.length; i++) if (sorted[i].rank !== sorted[i - 1].rank + 1) return null;
+    return { type: 'run', cards: sorted }; // Ace is low only: A-2-3 is a run, Q-K-A is not
+  }
+
+  // Cards a player may pick up from a discarded group: any card of a set, only the ends of a run.
+  function pickableFrom(group) {
+    if (!group) return [];
+    if (group.type === 'run') return [group.cards[0], group.cards[group.cards.length - 1]];
+    return group.cards.slice();
+  }
+
+  // Every legal discard from a hand (used by the AI and for UI hints).
+  function allDiscards(hand, rules) {
+    rules = rules || DEFAULT_RULES;
+    var out = [];
+    var i, j;
+    for (i = 0; i < hand.length; i++) out.push([hand[i]]);
+    // sets: every subset of size >= 2 of each rank
+    var byRank = {};
+    hand.forEach(function (c) { (byRank[c.rank] = byRank[c.rank] || []).push(c); });
+    Object.keys(byRank).forEach(function (r) {
+      var g = byRank[r];
+      var n = g.length;
+      for (var mask = 1; mask < (1 << n); mask++) {
+        var sub = g.filter(function (_, k) { return mask & (1 << k); });
+        if (sub.length >= 2) out.push(sub);
+      }
+    });
+    // runs: every consecutive window of length >= minRun in each suit
+    var bySuit = {};
+    hand.forEach(function (c) { (bySuit[c.suit] = bySuit[c.suit] || []).push(c); });
+    Object.keys(bySuit).forEach(function (s) {
+      var g = bySuit[s].slice().sort(function (a, b) { return a.rank - b.rank; });
+      for (i = 0; i < g.length; i++) {
+        var run = [g[i]];
+        for (j = i + 1; j < g.length && g[j].rank === run[run.length - 1].rank + 1; j++) {
+          run.push(g[j]);
+          if (run.length >= rules.minRun) out.push(run.slice());
+        }
+      }
+    });
+    return out;
+  }
+
+  // ---------- game setup ----------
+
+  /*
+   * players: [{name, type:'human'|'cpu', level?:'easy'|'normal'|'hard'}]
+   */
+  function newGame(players, rules, seed) {
+    if (!players || players.length < 2 || players.length > 8) throw new YanivError('Yaniv needs 2 to 8 players.');
+    var r = {};
+    Object.keys(DEFAULT_RULES).forEach(function (k) { r[k] = DEFAULT_RULES[k]; });
+    if (rules) Object.keys(rules).forEach(function (k) { r[k] = rules[k]; });
+    if (players.length * r.handSize > 40) throw new YanivError('Too many cards per hand for this many players.');
+    var state = {
+      version: 1,
+      rules: r,
+      rngState: (seed == null ? Math.floor(Math.random() * 4294967296) : seed) >>> 0,
+      players: players.map(function (p, i) {
+        return { id: i, name: p.name || ('Player ' + (i + 1)), type: p.type || 'human', level: p.level || 'normal',
+                 hand: [], score: 0, out: false, known: [] };
+      }),
+      round: 0,
+      dealer: -1,
+      starter: 0,
+      deck: [], discard: [], buried: [],
+      turn: 0, phase: 'idle', turnsTaken: 0,
+      pending: null,      // group discarded this turn, waiting for the draw
+      slap: null,         // {playerId, cardId} when a slap-down is on offer
+      lastAction: null,
+      roundResult: null,
+      history: [],        // per-round score deltas
+      winner: null
+    };
+    startRound(state, 0);
+    return state;
+  }
+
+  function activePlayers(state) { return state.players.filter(function (p) { return !p.out; }); }
+
+  function nextActive(state, from) {
+    var n = state.players.length;
+    for (var k = 1; k <= n; k++) {
+      var i = (from + k) % n;
+      if (!state.players[i].out) return i;
+    }
+    return from;
+  }
+
+  function startRound(state, starter) {
+    state.round += 1;
+    state.deck = shuffle(state, newDeck());
+    state.discard = []; state.buried = [];
+    state.players.forEach(function (p) { p.hand = []; p.known = []; });
+    for (var c = 0; c < state.rules.handSize; c++)
+      state.players.forEach(function (p) { if (!p.out) p.hand.push(state.deck.pop()); });
+    state.discard.push({ type: 'single', cards: [state.deck.pop()], by: null });
+    if (state.players[starter].out) starter = nextActive(state, starter);
+    state.starter = starter;
+    state.turn = starter;
+    state.phase = 'discard';
+    state.turnsTaken = 0;
+    state.pending = null; state.slap = null; state.roundResult = null;
+    state.lastAction = { type: 'deal', round: state.round };
+    return state;
+  }
+
+  // ---------- turn actions ----------
+
+  function current(state) { return state.players[state.turn]; }
+
+  function takeFromHand(player, ids) {
+    var cards = ids.map(function (id) {
+      var c = player.hand.find(function (h) { return h.id === id; });
+      if (!c) throw new YanivError('You do not hold ' + id + '.');
+      return c;
+    });
+    if (new Set(ids).size !== ids.length) throw new YanivError('Duplicate card in discard.');
+    return cards;
+  }
+
+  function canCallYaniv(state, playerId) {
+    if (state.phase !== 'discard' || state.turn !== playerId) return false;
+    if (state.players[playerId].hand.length === 0) return true;
+    if (state.rules.noYanivFirstTurn && state.turnsTaken < activePlayers(state).length) return false;
+    return handValue(state.players[playerId].hand) <= state.rules.yanivMax;
+  }
+
+  function discard(state, playerId, cardIds) {
+    if (state.phase === 'slap' && state.slap && state.slap.playerId !== playerId) passSlap(state);
+    if (state.phase !== 'discard') throw new YanivError('Not time to discard.');
+    if (state.turn !== playerId) throw new YanivError('Not your turn.');
+    var p = current(state);
+    var cards = takeFromHand(p, cardIds);
+    var group = classifyGroup(cards, state.rules);
+    if (!group) throw new YanivError('Discard one card, a set of the same rank, or a run of ' + state.rules.minRun + '+ in one suit.');
+    p.hand = p.hand.filter(function (c) { return cardIds.indexOf(c.id) < 0; });
+    p.known = p.known.filter(function (c) { return cardIds.indexOf(c.id) < 0; });
+    group.by = playerId;
+    state.pending = group;
+    state.phase = 'draw';
+    state.lastAction = { type: 'discard', player: playerId, group: group };
+    return state;
+  }
+
+  function refillDeck(state) {
+    if (state.deck.length > 0) return;
+    // Everything under the top group goes back in the deck.
+    var pool = state.buried.slice();
+    for (var i = 0; i < state.discard.length - 1; i++) pool = pool.concat(state.discard[i].cards);
+    state.discard = state.discard.slice(-1);
+    state.buried = [];
+    state.deck = shuffle(state, pool);
+    state.lastAction = { type: 'reshuffle' };
+  }
+
+  // source: 'deck' or a card id from the top discard group.
+  function draw(state, playerId, source) {
+    if (state.phase !== 'draw') throw new YanivError('Discard first, then draw.');
+    if (state.turn !== playerId) throw new YanivError('Not your turn.');
+    var p = current(state);
+    var top = state.discard[state.discard.length - 1];
+    var drawn, fromPile = false;
+    if (source === 'deck') {
+      refillDeck(state);
+      if (state.deck.length === 0) throw new YanivError('No cards left to draw.');
+      drawn = state.deck.pop();
+    } else {
+      var options = pickableFrom(top);
+      drawn = options.find(function (c) { return c.id === source; });
+      if (!drawn) throw new YanivError('You can only take a card from the top of the discard pile (the end of a run).');
+      fromPile = true;
+      top.cards = top.cards.filter(function (c) { return c.id !== drawn.id; });
+    }
+    // The previous top group is now covered: its remaining cards are dead until a reshuffle.
+    if (top && top.cards.length) state.buried = state.buried.concat(top.cards);
+    state.discard.pop();
+    state.discard.push(state.pending);
+    // keep the visible pile short; older groups are dead cards
+    while (state.discard.length > 1) state.buried = state.buried.concat(state.discard.shift().cards);
+    p.hand.push(drawn);
+    if (fromPile) p.known.push(drawn); // everyone saw which card was taken
+    var discarded = state.pending;
+    state.pending = null;
+    state.lastAction = { type: 'draw', player: playerId, threw: discarded.cards.slice(), from: fromPile ? 'pile' : 'deck', card: fromPile ? drawn : null };
+    state.turnsTaken += 1;
+
+    if (!fromPile && state.rules.slapDown && discarded.type !== 'run' &&
+        drawn.rank === discarded.cards[0].rank) {
+      state.phase = 'slap';
+      state.slap = { playerId: playerId, cardId: drawn.id };
+      return state;
+    }
+    endTurn(state);
+    return state;
+  }
+
+  function slapDown(state, playerId) {
+    if (state.phase !== 'slap' || !state.slap || state.slap.playerId !== playerId) throw new YanivError('No slap-down available.');
+    var p = state.players[playerId];
+    var card = p.hand.find(function (c) { return c.id === state.slap.cardId; });
+    p.hand = p.hand.filter(function (c) { return c !== card; });
+    var top = state.discard[state.discard.length - 1];
+    top.cards.push(card);
+    top.type = 'set';
+    state.lastAction = { type: 'slap', player: playerId, card: card };
+    state.slap = null;
+    // Slapping your last card leaves an empty hand: zero points, an automatic Yaniv next turn.
+    endTurn(state);
+    return state;
+  }
+
+  function passSlap(state) {
+    if (state.phase !== 'slap') return state;
+    state.slap = null;
+    endTurn(state);
+    return state;
+  }
+
+  function endTurn(state) {
+    state.turn = nextActive(state, state.turn);
+    state.phase = 'discard';
+  }
+
+  // ---------- Yaniv / Assaf ----------
+
+  function applyFiftyRule(score, rule) {
+    if (score > 0 && score % 50 === 0) {
+      if (rule === 'subtract') return score - 50;
+      if (rule === 'halve') return score / 2;
+    }
+    return score;
+  }
+
+  function callYaniv(state, playerId) {
+    if (state.phase === 'slap') passSlap(state);
+    if (!canCallYaniv(state, playerId)) throw new YanivError('You can call Yaniv at the start of your turn with ' + state.rules.yanivMax + ' or less.');
+    var caller = state.players[playerId];
+    var callerValue = handValue(caller.hand);
+    var totals = state.players.map(function (p) { return p.out ? null : handValue(p.hand); });
+    // Assaf: anyone else holding the same or less.
+    var assafers = state.players.filter(function (p) { return !p.out && p.id !== playerId && totals[p.id] <= callerValue; });
+    var lowest = Math.min.apply(null, totals.filter(function (t) { return t !== null; }));
+    var deltas = {};
+    var roundWinner;
+    state.players.forEach(function (p) {
+      if (p.out) return;
+      if (assafers.length === 0) {
+        deltas[p.id] = p.id === playerId ? 0 : totals[p.id];
+      } else if (p.id === playerId) {
+        deltas[p.id] = totals[p.id] + state.rules.assafPenalty;
+      } else if (assafers.indexOf(p) >= 0) {
+        deltas[p.id] = 0;
+      } else {
+        deltas[p.id] = totals[p.id];
+      }
+    });
+    if (assafers.length) {
+      // the Assafer with the lowest hand wins the round (nearest after the caller breaks ties)
+      var best = assafers.filter(function (p) { return totals[p.id] === lowest; });
+      best.sort(function (a, b) { return seatDist(state, playerId, a.id) - seatDist(state, playerId, b.id); });
+      roundWinner = best[0].id;
+    } else roundWinner = playerId;
+
+    var before = state.players.map(function (p) { return p.score; });
+    var resets = {};
+    var eliminated = [];
+    state.players.forEach(function (p) {
+      if (p.out) return;
+      var s = p.score + deltas[p.id];
+      var adj = deltas[p.id] > 0 ? applyFiftyRule(s, state.rules.fiftyRule) : s;
+      if (adj !== s) resets[p.id] = { from: s, to: adj };
+      p.score = adj;
+      if (p.score > state.rules.eliminateAbove) { p.out = true; eliminated.push(p.id); }
+    });
+
+    state.roundResult = {
+      round: state.round,
+      caller: playerId,
+      callerValue: callerValue,
+      assaf: assafers.length > 0,
+      assafers: assafers.map(function (p) { return p.id; }),
+      winner: roundWinner,
+      hands: state.players.map(function (p) { return p.hand.slice(); }),
+      totals: totals,
+      deltas: deltas,
+      before: before,
+      after: state.players.map(function (p) { return p.score; }),
+      resets: resets,
+      eliminated: eliminated
+    };
+    state.history.push({ round: state.round, deltas: deltas, after: state.roundResult.after });
+    state.lastAction = { type: 'yaniv', player: playerId, assaf: assafers.length > 0 };
+
+    var alive = activePlayers(state);
+    if (alive.length <= 1) {
+      state.phase = 'gameOver';
+      state.winner = alive.length ? alive[0].id : lowestScorer(state);
+    } else {
+      state.phase = 'roundOver';
+    }
+    return state;
+  }
+
+  function seatDist(state, from, to) { var n = state.players.length; return (to - from + n) % n; }
+  function lowestScorer(state) {
+    return state.players.slice().sort(function (a, b) { return a.score - b.score; })[0].id;
+  }
+
+  function nextRound(state) {
+    if (state.phase !== 'roundOver') throw new YanivError('The round is not over.');
+    // Whoever won the round starts the next one (if they were knocked out, the next seat does).
+    startRound(state, state.roundResult.winner);
+    return state;
+  }
+
+  // ---------- single entry point for actions (used by the local session and the server) ----------
+
+  // action: {type:'play', cards:[ids], source:'deck'|cardId}  (discard + draw in one tap)
+  //         {type:'discard', cards} | {type:'draw', source} | {type:'yaniv'} | {type:'slap'} | {type:'passSlap'} | {type:'nextRound'}
+  function applyAction(state, seat, action) {
+    switch (action && action.type) {
+      case 'play':
+        // validate the draw choice before touching the state so a bad tap changes nothing
+        if (action.source !== 'deck') {
+          var top = state.discard[state.discard.length - 1];
+          if (!pickableFrom(top).some(function (c) { return c.id === action.source; }))
+            throw new YanivError('You can only take a card from the top of the discard pile (the end of a run).');
+        }
+        if (state.phase === 'slap' && state.slap && state.slap.playerId !== seat) passSlap(state);
+        var p = state.players[seat];
+        if (state.phase === 'discard' && state.turn === seat) {
+          var cards = (action.cards || []).map(function (id) { return p.hand.find(function (c) { return c.id === id; }); });
+          if (cards.some(function (c) { return !c; }) || !classifyGroup(cards, state.rules))
+            throw new YanivError('Discard one card, a set of the same rank, or a run of ' + state.rules.minRun + '+ in one suit.');
+        }
+        discard(state, seat, action.cards || []);
+        return draw(state, seat, action.source);
+      case 'discard': return discard(state, seat, action.cards || []);
+      case 'draw': return draw(state, seat, action.source);
+      case 'yaniv': return callYaniv(state, seat);
+      case 'slap': return slapDown(state, seat);
+      case 'passSlap':
+        if (!state.slap || state.slap.playerId !== seat) throw new YanivError('No slap-down to pass.');
+        return passSlap(state);
+      case 'nextRound': return nextRound(state);
+      default: throw new YanivError('Unknown action.');
+    }
+  }
+
+  // ---------- views ----------
+
+  // What a given player is allowed to see. A server would send this instead of the full state.
+  function viewFor(state, playerId) {
+    var v = JSON.parse(JSON.stringify(state));
+    v.players.forEach(function (p) {
+      p.handCount = p.hand.length;
+      if (p.id !== playerId && state.phase !== 'roundOver' && state.phase !== 'gameOver') p.hand = null;
+    });
+    if (v.slap && v.slap.playerId !== playerId) delete v.slap.cardId; // others don't see the drawn card
+    v.deckCount = state.deck.length;
+    delete v.deck; delete v.buried; delete v.rngState;
+    return v;
+  }
+
+  var api = {
+    SUITS: SUITS, RANKS: RANKS, DEFAULT_RULES: DEFAULT_RULES, YanivError: YanivError,
+    cardValue: cardValue, handValue: handValue, rankLabel: rankLabel, newDeck: newDeck,
+    classifyGroup: classifyGroup, pickableFrom: pickableFrom, allDiscards: allDiscards,
+    applyAction: applyAction, newGame: newGame, nextRound: nextRound, discard: discard, draw: draw,
+    slapDown: slapDown, passSlap: passSlap, callYaniv: callYaniv, canCallYaniv: canCallYaniv,
+    applyFiftyRule: applyFiftyRule, activePlayers: activePlayers, viewFor: viewFor
+  };
+  root.YanivEngine = api;
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+
+</script>
+<script>
+/*
+ * Computer players. They only use information a human at the table would have:
+ * their own hand, the discard pile, hand sizes, and cards other players were seen
+ * taking from the pile (state.players[i].known).
+ *
+ * Strategy, in short:
+ *  1. Call Yaniv when the hand is low enough AND the risk of an Assaf looks small,
+ *     judged from the opponents' hand sizes and the cards we know they hold.
+ *  2. Otherwise pick the discard + draw pair that leaves the lowest "effective"
+ *     hand: point total minus a bonus for pairs and near-runs we can dump next turn.
+ */
+(function (root) {
+  'use strict';
+  var E = root.YanivEngine || (typeof require !== 'undefined' ? require('./engine.js') : null);
+
+  // How much of the hand we can expect to throw next turn in one go.
+  function potential(hand, rules) {
+    var best = 0;
+    E.allDiscards(hand, rules).forEach(function (g) {
+      if (g.length > 1) best = Math.max(best, E.handValue(g) - Math.max.apply(null, g.map(E.cardValue)));
+    });
+    // near-runs: two suited cards one or two apart (could become a run)
+    var near = 0;
+    for (var i = 0; i < hand.length; i++)
+      for (var j = i + 1; j < hand.length; j++)
+        if (hand[i].suit === hand[j].suit && Math.abs(hand[i].rank - hand[j].rank) <= 2 && hand[i].rank !== hand[j].rank) near = 1;
+    return best + near;
+  }
+
+  // Utility of holding `hand` after our turn (lower is better): points, minus a bonus for
+  // combos we can dump next turn, minus a reward for being able to call Yaniv next turn.
+  // The Yaniv reward matters: without it, two bots happily swap 5s and 6s forever.
+  function effective(hand, rules, level) {
+    var w = level === 'easy' ? 0 : level === 'hard' ? 0.8 : 0.5;
+    var v = E.handValue(hand);
+    var yanivBonus = v <= rules.yanivMax ? (level === 'easy' ? 2 : 5) : 0;
+    return v - w * potential(hand, rules) - yanivBonus;
+  }
+
+  // Expected utility of drawing blind from the deck: average over the 13 ranks.
+  // (A finer version would weight by unseen cards; ranks are close to uniform anyway.)
+  function deckUtility(rest, rules, level) {
+    var total = 0;
+    for (var r = 1; r <= 13; r++) total += effective(rest.concat([{ id: '?' + r, suit: '?', rank: r }]), rules, level);
+    return total / 13;
+  }
+
+  // Lowest total each opponent could plausibly hold.
+  function opponentFloor(state, me) {
+    var floors = [];
+    state.players.forEach(function (p) {
+      if (p.out || p.id === me) return;
+      var n = p.hand ? p.hand.length : p.handCount;
+      var known = p.known || [];
+      var unknown = Math.max(0, n - known.length);
+      // unknown cards: assume they kept their low cards, so ~2 each is a cautious guess
+      floors.push(E.handValue(known) + unknown * 2);
+    });
+    return Math.min.apply(null, floors);
+  }
+
+  function shouldCallYaniv(state, me) {
+    if (!E.canCallYaniv(state, me)) return false;
+    var p = state.players[me];
+    var v = E.handValue(p.hand);
+    var lvl = p.level;
+    if (lvl === 'easy' || stalled(state)) return true;
+    if (v <= 2) return true;
+    var floor = opponentFloor(state, me);
+    var margin = lvl === 'hard' ? 1 : 0;
+    return v + margin < floor || v <= (lvl === 'hard' ? 3 : 4) && floor >= v;
+  }
+
+  // A round that drags on (bots trading the same low cards back and forth) makes them bolder.
+  function stalled(state) { return state.turnsTaken > 12 * E.activePlayers(state).length; }
+
+  // Deterministic jitter so replays and tests are reproducible.
+  function noise(state, key) {
+    var h = (state.rngState ^ (state.turnsTaken * 2654435761)) >>> 0;
+    for (var i = 0; i < key.length; i++) h = Math.imul(h ^ key.charCodeAt(i), 16777619) >>> 0;
+    return (h % 1000) / 1000;
+  }
+
+  // Choose {discard:[ids], draw:'deck'|cardId}
+  function chooseMove(state, me) {
+    var p = state.players[me];
+    var rules = state.rules;
+    var top = state.discard[state.discard.length - 1];
+    var pickable = E.pickableFrom(top);
+    var best = null;
+    E.allDiscards(p.hand, rules).forEach(function (group) {
+      var ids = group.map(function (c) { return c.id; });
+      var rest = p.hand.filter(function (c) { return ids.indexOf(c.id) < 0; });
+      // option: draw from deck (unknown card)
+      var deckScore = deckUtility(rest, rules, p.level);
+      consider(ids, 'deck', deckScore, group);
+      pickable.forEach(function (c) {
+        var s = effective(rest.concat([c]), rules, p.level);
+        consider(ids, c.id, s, group);
+      });
+    });
+    function consider(ids, draw, score, group) {
+      // tie-break: dump more points now (they are guaranteed gone)
+      score -= E.handValue(group) * 0.01;
+      if (draw !== 'deck' && stalled(state)) score += 2; // break swap loops in long rounds
+      if (p.level === 'easy') score += noise(state, ids.join() + draw) * 3;
+      if (!best || score < best.score) best = { discard: ids, draw: draw, score: score };
+    }
+    return best;
+  }
+
+  // The actions a computer player wants to take now, in order, without applying them.
+  function decide(state, me) {
+    if (state.phase === 'slap' && state.slap && state.slap.playerId === me) return [{ type: 'slap' }];
+    if (state.phase !== 'discard' || state.turn !== me) return [];
+    if (shouldCallYaniv(state, me)) return [{ type: 'yaniv' }];
+    var m = chooseMove(state, me);
+    return [{ type: 'play', cards: m.discard, source: m.draw }];
+  }
+
+  // Performs one full computer turn on the state. Returns a list of the actions taken (for animation).
+  function playTurn(state, me) {
+    var steps = [];
+    if (state.phase === 'slap') {
+      if (state.slap.playerId === me) { E.slapDown(state, me); steps.push({ type: 'slap' }); return steps; }
+      E.passSlap(state);
+    }
+    if (shouldCallYaniv(state, me)) { E.callYaniv(state, me); steps.push({ type: 'yaniv' }); return steps; }
+    var m = chooseMove(state, me);
+    E.discard(state, me, m.discard); steps.push({ type: 'discard', cards: m.discard });
+    E.draw(state, me, m.draw); steps.push({ type: 'draw', from: m.draw });
+    if (state.phase === 'slap' && state.slap.playerId === me) { E.slapDown(state, me); steps.push({ type: 'slap' }); }
+    return steps;
+  }
+
+  var api = { decide: decide, chooseMove: chooseMove, shouldCallYaniv: shouldCallYaniv, playTurn: playTurn };
+  root.YanivAI = api;
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+
+</script>
+<script>
+/*
+ * Card themes.
+ *
+ * The game never draws a card directly: it asks the active theme for a face or a back.
+ * That is the seam for custom art. A theme is:
+ *
+ *   {
+ *     id, name,
+ *     face(card) -> HTML string   // card = {id:'7H', suit:'H', rank:7}
+ *     back()     -> HTML string
+ *   }
+ *
+ * Two kinds ship today:
+ *   - 'classic': drawn in SVG, no image files, crisp at any size.
+ *   - image themes: one picture per card, keyed by card id (AS, 2S ... 10S, JS, QS, KS,
+ *     same for H, D, C) plus 'back'. Missing pictures fall back to the classic face,
+ *     so a half-finished custom deck still plays.
+ *
+ * Custom decks can be loaded in the app (Settings > Card art > Load images) and are kept in
+ * IndexedDB on that device, or baked in by adding an entry to BUILT_IN_IMAGE_THEMES with URLs.
+ * Card images look best at 5:7 (e.g. 500x700 px).
+ */
+(function (root) {
+  'use strict';
+
+  var SUIT_SYMBOL = { S: '♠', H: '♥', D: '♦', C: '♣' };
+  var SUIT_NAME = { S: 'spades', H: 'hearts', D: 'diamonds', C: 'clubs' };
+  var RED = { H: true, D: true };
+  function rankLabel(r) { return ({ 1: 'A', 11: 'J', 12: 'Q', 13: 'K' })[r] || String(r); }
+  function rankName(r) { return ({ 1: 'Ace', 11: 'Jack', 12: 'Queen', 13: 'King' })[r] || String(r); }
+  function label(card) { return rankName(card.rank) + ' of ' + SUIT_NAME[card.suit]; }
+
+  // Pip positions on a 100 x 140 card, [x, y, flipped]
+  var L = 30, M = 50, R = 70;
+  var PIPS = {
+    1: [[M, 70]],
+    2: [[M, 28], [M, 112, 1]],
+    3: [[M, 28], [M, 70], [M, 112, 1]],
+    4: [[L, 28], [R, 28], [L, 112, 1], [R, 112, 1]],
+    5: [[L, 28], [R, 28], [M, 70], [L, 112, 1], [R, 112, 1]],
+    6: [[L, 28], [R, 28], [L, 70], [R, 70], [L, 112, 1], [R, 112, 1]],
+    7: [[L, 28], [R, 28], [M, 49], [L, 70], [R, 70], [L, 112, 1], [R, 112, 1]],
+    8: [[L, 28], [R, 28], [M, 49], [L, 70], [R, 70], [M, 91, 1], [L, 112, 1], [R, 112, 1]],
+    9: [[L, 28], [R, 28], [L, 56], [R, 56], [M, 70], [L, 84, 1], [R, 84, 1], [L, 112, 1], [R, 112, 1]],
+    10: [[L, 28], [R, 28], [M, 42], [L, 56], [R, 56], [L, 84, 1], [R, 84, 1], [M, 98, 1], [L, 112, 1], [R, 112, 1]]
+  };
+
+  function classicFace(card) {
+    var color = RED[card.suit] ? 'var(--card-red)' : 'var(--card-black)';
+    var sym = SUIT_SYMBOL[card.suit];
+    var lab = rankLabel(card.rank);
+    var body = '';
+    if (card.rank <= 10) {
+      var size = card.rank === 1 ? 46 : 19;
+      PIPS[card.rank].forEach(function (p) {
+        body += '<text x="' + p[0] + '" y="' + p[1] + '" font-size="' + size + '" text-anchor="middle" dominant-baseline="central"' +
+          (p[2] ? ' transform="rotate(180 ' + p[0] + ' ' + p[1] + ')"' : '') + '>' + sym + '</text>';
+      });
+    } else {
+      body = '<rect x="22" y="22" width="56" height="96" rx="6" fill="none" stroke="' + color + '" stroke-width="1.5" opacity=".55"/>' +
+        '<text x="50" y="62" font-size="40" font-weight="700" text-anchor="middle" dominant-baseline="central" font-family="Georgia, serif">' + lab + '</text>' +
+        '<text x="50" y="94" font-size="22" text-anchor="middle" dominant-baseline="central">' + sym + '</text>';
+    }
+    var corner = '<text x="9" y="17" font-size="17" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">' + lab + '</text>' +
+      '<text x="9" y="31" font-size="13" text-anchor="middle">' + sym + '</text>';
+    return '<svg class="card-svg" viewBox="0 0 100 140" role="img" aria-label="' + label(card) + '" fill="' + color + '">' +
+      '<rect x="0.5" y="0.5" width="99" height="139" rx="8" fill="var(--card-face)" stroke="var(--card-edge)"/>' +
+      corner + '<g transform="rotate(180 50 70)">' + corner + '</g>' + body + '</svg>';
+  }
+
+  function classicBack() {
+    return '<svg class="card-svg" viewBox="0 0 100 140" role="img" aria-label="Card back">' +
+      '<defs><pattern id="yb" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">' +
+      '<rect width="10" height="10" fill="var(--back-1)"/><rect width="5" height="10" fill="var(--back-2)"/></pattern></defs>' +
+      '<rect x="0.5" y="0.5" width="99" height="139" rx="8" fill="var(--card-face)" stroke="var(--card-edge)"/>' +
+      '<rect x="6" y="6" width="88" height="128" rx="5" fill="url(#yb)"/>' +
+      '<text x="50" y="72" font-size="20" font-weight="800" text-anchor="middle" dominant-baseline="central" fill="var(--card-face)" font-family="Georgia, serif" letter-spacing="1">Y</text></svg>';
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (ch) { return '&#' + ch.charCodeAt(0) + ';'; }); }
+
+  function imageTheme(id, name, images) {
+    return {
+      id: id, name: name, images: images,
+      face: function (card) {
+        var src = images[card.id];
+        return src ? '<img class="card-img" alt="' + label(card) + '" src="' + esc(src) + '" draggable="false">' : classicFace(card);
+      },
+      back: function () {
+        return images.back ? '<img class="card-img" alt="Card back" src="' + esc(images.back) + '" draggable="false">' : classicBack();
+      }
+    };
+  }
+
+  var themes = {
+    classic: { id: 'classic', name: 'Classic', face: classicFace, back: classicBack }
+  };
+  // Add hosted decks here, e.g. { id:'family', name:'Family deck', base:'cards/family/', ext:'.png' }
+  var BUILT_IN_IMAGE_THEMES = [];
+  BUILT_IN_IMAGE_THEMES.forEach(function (t) {
+    var imgs = { back: t.base + 'back' + t.ext };
+    ['S', 'H', 'D', 'C'].forEach(function (s) { for (var r = 1; r <= 13; r++) imgs[rankLabel(r) + s] = t.base + rankLabel(r) + s + t.ext; });
+    themes[t.id] = imageTheme(t.id, t.name, imgs);
+  });
+
+  var active = themes.classic;
+
+  // ---- custom decks stored on this device (IndexedDB) ----
+  var DB = 'yaniv-cards', STORE = 'decks';
+  function openDb() {
+    return new Promise(function (resolve, reject) {
+      if (!root.indexedDB) return reject(new Error('No IndexedDB'));
+      var req = root.indexedDB.open(DB, 1);
+      req.onupgradeneeded = function () { req.result.createObjectStore(STORE); };
+      req.onsuccess = function () { resolve(req.result); };
+      req.onerror = function () { reject(req.error); };
+    });
+  }
+  function tx(mode, fn) {
+    return openDb().then(function (db) {
+      return new Promise(function (resolve, reject) {
+        var t = db.transaction(STORE, mode); var r = fn(t.objectStore(STORE));
+        t.oncomplete = function () { resolve(r && r.result); }; t.onerror = function () { reject(t.error); };
+      });
+    });
+  }
+
+  // Map a file name to a card id: "AS.png", "10h.jpg", "queen_of_hearts.png", "back.png"
+  function idFromFileName(fileName) {
+    var base = fileName.replace(/\.[^.]+$/, '').toLowerCase().replace(/[\s-]+/g, '_');
+    if (/^(back|cardback|card_back)$/.test(base)) return 'back';
+    var m = base.match(/^(a|ace|[2-9]|10|j|jack|q|queen|k|king|1[1-3]|1)_?(?:of_)?(s|spades?|h|hearts?|d|diamonds?|c|clubs?)$/);
+    if (!m) return null;
+    var rk = { a: 'A', ace: 'A', '1': 'A', j: 'J', jack: 'J', '11': 'J', q: 'Q', queen: 'Q', '12': 'Q', k: 'K', king: 'K', '13': 'K' }[m[1]] || m[1];
+    return rk + m[2][0].toUpperCase();
+  }
+
+  function readAsDataUrl(file) {
+    return new Promise(function (resolve, reject) {
+      var fr = new FileReader(); fr.onload = function () { resolve(fr.result); }; fr.onerror = reject; fr.readAsDataURL(file);
+    });
+  }
+
+  // Returns {matched:[ids], skipped:[names]}
+  function importDeck(name, files) {
+    var images = {}, skipped = [];
+    var jobs = Array.prototype.map.call(files, function (f) {
+      var id = idFromFileName(f.name);
+      if (!id) { skipped.push(f.name); return null; }
+      return readAsDataUrl(f).then(function (url) { images[id] = url; });
+    });
+    return Promise.all(jobs).then(function () {
+      var id = 'custom-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      themes[id] = imageTheme(id, name, images);
+      return tx('readwrite', function (s) { return s.put({ name: name, images: images }, id); })
+        .catch(function () {}) // still usable this session if storage is unavailable
+        .then(function () { return { id: id, matched: Object.keys(images), skipped: skipped }; });
+    });
+  }
+
+  function loadSavedDecks() {
+    return openDb().then(function (db) {
+      return new Promise(function (resolve) {
+        var t = db.transaction(STORE, 'readonly'); var s = t.objectStore(STORE);
+        var req = s.openCursor();
+        req.onsuccess = function () {
+          var cur = req.result;
+          if (!cur) return resolve();
+          themes[cur.key] = imageTheme(cur.key, cur.value.name, cur.value.images);
+          cur.continue();
+        };
+        req.onerror = function () { resolve(); };
+      });
+    }).catch(function () {});
+  }
+
+  function deleteDeck(id) {
+    delete themes[id];
+    if (active.id === id) active = themes.classic;
+    return tx('readwrite', function (s) { return s.delete(id); }).catch(function () {});
+  }
+
+  var api = {
+    SUIT_SYMBOL: SUIT_SYMBOL, label: label, rankLabel: rankLabel,
+    face: function (card) { return active.face(card); },
+    back: function () { return active.back(); },
+    list: function () { return Object.keys(themes).map(function (k) { return { id: k, name: themes[k].name }; }); },
+    use: function (id) { if (themes[id]) active = themes[id]; return active.id; },
+    activeId: function () { return active.id; },
+    importDeck: importDeck, loadSavedDecks: loadSavedDecks, deleteDeck: deleteDeck, idFromFileName: idFromFileName
+  };
+  root.YanivTheme = api;
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+
+</script>
+<script>
+/*
+ * Sessions connect the UI to a game. The UI only ever sees:
+ *   session.onUpdate(fn)   fn({view, seat, ...})  where view = YanivEngine.viewFor(state, seat)
+ *   session.act(action)    action objects as in YanivEngine.applyAction
+ * so the same table code drives a local game and an online game.
+ *
+ * LocalSession   - the whole game runs in this browser (vs computer, pass-and-play).
+ * OnlineSession  - the game runs on the server; this browser holds one seat.
+ */
+(function (root) {
+  'use strict';
+  var E = root.YanivEngine, AI = root.YanivAI;
+  var SAVE_KEY = 'yaniv.local.v1';
+  var CPU_DELAY = 1100, CPU_SLAP_DELAY = 500;
+
+  function store(key, val) { try { if (val == null) localStorage.removeItem(key); else localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+  function load(key) { try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch (e) { return null; } }
+
+  // ------------------------------------------------------------------ local
+
+  function LocalSession(opts) {
+    this.listeners = [];
+    this.timer = null;
+    if (opts.saved) this.state = opts.saved;
+    else this.state = E.newGame(opts.players, opts.rules);
+    this.humans = this.state.players.filter(function (p) { return p.type === 'human'; }).map(function (p) { return p.id; });
+    this.seat = this.humans.length ? this.humans[0] : 0;
+    this.mode = 'local';
+    this.passAndPlay = this.humans.length > 1;
+  }
+  LocalSession.hasSave = function () { var s = load(SAVE_KEY); return !!(s && s.phase !== 'gameOver'); };
+  LocalSession.resume = function () { var s = load(SAVE_KEY); return s ? new LocalSession({ saved: s }) : null; };
+  LocalSession.clearSave = function () { store(SAVE_KEY, null); };
+
+  LocalSession.prototype.onUpdate = function (fn) { this.listeners.push(fn); this.emit(); };
+  LocalSession.prototype.emit = function (error) {
+    var s = this.state;
+    // In pass-and-play the screen follows whichever human is acting.
+    if (this.passAndPlay) {
+      var actor = s.phase === 'slap' && s.slap ? s.slap.playerId : s.turn;
+      if (s.players[actor].type === 'human' && (s.phase === 'discard' || s.phase === 'slap')) this.seat = actor;
+    }
+    var payload = { view: E.viewFor(s, this.seat), seat: this.seat, mode: 'local', passAndPlay: this.passAndPlay, error: error || null };
+    store(SAVE_KEY, s);
+    this.listeners.forEach(function (fn) { fn(payload); });
+  };
+  LocalSession.prototype.act = function (action) {
+    try {
+      var seat = this.seat;
+      // In pass-and-play, the "Next round" button can be pressed by anyone.
+      E.applyAction(this.state, seat, action);
+      this.emit();
+      this.scheduleCpu();
+    } catch (e) {
+      if (e instanceof E.YanivError) this.emit(e.message); else throw e;
+    }
+  };
+  LocalSession.prototype.scheduleCpu = function () {
+    var self = this, s = this.state;
+    clearTimeout(this.timer);
+    if (s.phase !== 'discard' && s.phase !== 'slap') return;
+    var actor = s.phase === 'slap' ? s.slap.playerId : s.turn;
+    var p = s.players[actor];
+    if (p.type !== 'cpu') {
+      // A human has a pending slap choice but the next player is a computer: wait for the human.
+      return;
+    }
+    this.timer = setTimeout(function () {
+      var actions = AI.decide(self.state, actor);
+      if (!actions.length) return;
+      E.applyAction(self.state, actor, actions[0]);
+      self.emit();
+      self.scheduleCpu();
+    }, s.phase === 'slap' ? CPU_SLAP_DELAY : CPU_DELAY);
+  };
+  LocalSession.prototype.start = function () { this.scheduleCpu(); };
+  LocalSession.prototype.leave = function () { clearTimeout(this.timer); this.listeners = []; };
+
+  // ------------------------------------------------------------------ online
+
+  function wsUrl() {
+    var loc = root.location;
+    return (loc.protocol === 'https:' ? 'wss://' : 'ws://') + loc.host + '/ws';
+  }
+
+  function OnlineSession(opts) {
+    this.listeners = [];
+    this.mode = 'online';
+    this.name = opts.name;
+    this.code = opts.code || null;
+    this.rules = opts.rules || null;
+    this.seat = null;
+    this.retry = 0;
+    this.closed = false;
+    this.last = null;
+    this.connect();
+  }
+  OnlineSession.tokenFor = function (code) { var t = load('yaniv.tokens') || {}; return t[code]; };
+  function saveToken(code, token) { var t = load('yaniv.tokens') || {}; t[code] = token; store('yaniv.tokens', t); store('yaniv.lastRoom', code); }
+
+  OnlineSession.prototype.connect = function () {
+    var self = this;
+    var ws = this.ws = new WebSocket(wsUrl());
+    ws.onopen = function () {
+      self.retry = 0;
+      if (self.code) self.send({ t: 'join', code: self.code, name: self.name, token: OnlineSession.tokenFor(self.code) });
+      else self.send({ t: 'create', name: self.name, rules: self.rules });
+    };
+    ws.onmessage = function (ev) {
+      var m; try { m = JSON.parse(ev.data); } catch (e) { return; }
+      if (m.t === 'joined') { self.code = m.code; self.seat = m.seat; saveToken(m.code, m.token); return; }
+      if (m.t === 'error') { self.push({ error: m.msg, fatal: !!m.fatal }); if (m.fatal) self.leave(); return; }
+      if (m.t === 'room') {
+        self.seat = m.seat;
+        self.push({ room: m.room, view: m.view, seat: m.seat, error: null });
+      }
+    };
+    ws.onclose = function () {
+      if (self.closed) return;
+      self.push({ offline: true });
+      var wait = Math.min(8000, 500 * Math.pow(2, self.retry++));
+      setTimeout(function () { if (!self.closed) self.connect(); }, wait);
+    };
+  };
+  OnlineSession.prototype.push = function (patch) {
+    var base = this.last || { mode: 'online', passAndPlay: false };
+    var next = {};
+    Object.keys(base).forEach(function (k) { next[k] = base[k]; });
+    next.offline = false;
+    Object.keys(patch).forEach(function (k) { next[k] = patch[k]; });
+    next.mode = 'online';
+    this.last = next;
+    this.listeners.forEach(function (fn) { fn(next); });
+  };
+  OnlineSession.prototype.send = function (m) { if (this.ws && this.ws.readyState === 1) this.ws.send(JSON.stringify(m)); };
+  OnlineSession.prototype.onUpdate = function (fn) { this.listeners.push(fn); if (this.last) fn(this.last); };
+  OnlineSession.prototype.act = function (action) { this.send({ t: 'act', action: action }); };
+  OnlineSession.prototype.lobby = function (m) { this.send(m); }; // addBot, removeSeat, start, rules
+  OnlineSession.prototype.start = function () {};
+  OnlineSession.prototype.leave = function () {
+    this.closed = true; this.listeners = [];
+    try { this.send({ t: 'leave' }); this.ws.close(); } catch (e) {}
+  };
+
+  root.YanivSession = { LocalSession: LocalSession, OnlineSession: OnlineSession, store: store, load: load };
+})(typeof globalThis !== 'undefined' ? globalThis : this);
+
+</script>
+<script>
+/*
+ * The interface. Renders from the latest session payload; every button carries a
+ * data-act attribute handled by one delegated click listener at the bottom.
+ */
+(function () {
+  'use strict';
+  var E = window.YanivEngine, T = window.YanivTheme, S = window.YanivSession;
+  var app = document.getElementById('app');
+  var toastEl = document.getElementById('toast');
+
+  var ui = {
+    screen: 'home',            // home | setup | online | cardart | rules  (when no session)
+    session: null,
+    payload: null,
+    selected: [],              // selected card ids in my hand
+    sort: S.load('yaniv.sort') || 'rank',
+    shownSeat: null,           // pass-and-play: whose hand is currently uncovered
+    sheet: null,               // menu | rules | scores | cardart (overlay during a game)
+    log: [], lastActionKey: '',
+    lastHandIds: [], newCardId: null,
+    setupPlayers: S.load('yaniv.setup') || [
+      { name: S.load('yaniv.name') || 'You', type: 'human' },
+      { name: 'Avi', type: 'cpu', level: 'normal' },
+      { name: 'Noa', type: 'cpu', level: 'normal' }
+    ],
+    rules: Object.assign({}, E.DEFAULT_RULES, S.load('yaniv.rules') || {}),
+    joinCode: '',
+    artMsg: ''
+  };
+
+  // ---------------------------------------------------------------- helpers
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); }
+  function short(card) {
+    var red = card.suit === 'H' || card.suit === 'D';
+    return '<span class="' + (red ? 'suit-r' : '') + '">' + T.rankLabel(card.rank) + T.SUIT_SYMBOL[card.suit] + '</span>';
+  }
+  function shortList(cards) { return cards.map(short).join(' '); }
+  function toast(msg) {
+    toastEl.textContent = msg; toastEl.classList.add('show');
+    clearTimeout(toast.t); toast.t = setTimeout(function () { toastEl.classList.remove('show'); }, 2600);
+  }
+  function cardHtml(card, cls, attrs) {
+    return '<button type="button" class="card ' + (cls || '') + '" ' + (attrs || '') + ' aria-label="' + esc(T.label(card)) + '">' + T.face(card) + '</button>';
+  }
+  function backHtml(cls) { return '<span class="card ' + (cls || '') + '" aria-hidden="true">' + T.back() + '</span>'; }
+  function myName() { return S.load('yaniv.name') || ''; }
+  function sortHand(hand) {
+    var suitOrder = { S: 0, H: 1, C: 2, D: 3 };
+    return hand.slice().sort(ui.sort === 'suit'
+      ? function (a, b) { return suitOrder[a.suit] - suitOrder[b.suit] || a.rank - b.rank; }
+      : function (a, b) { return a.rank - b.rank || suitOrder[a.suit] - suitOrder[b.suit]; });
+  }
+  function haptic() { if (navigator.vibrate) try { navigator.vibrate(12); } catch (e) {} }
+
+  // ---------------------------------------------------------------- session wiring
+  function startSession(session) {
+    if (ui.session) ui.session.leave();
+    ui.session = session; ui.payload = null; ui.selected = []; ui.log = []; ui.lastActionKey = ''; ui.shownSeat = null; ui.sheet = null;
+    session.onUpdate(onUpdate);
+    session.start();
+    render();
+  }
+  function endSession() {
+    if (ui.session) ui.session.leave();
+    ui.session = null; ui.payload = null; ui.screen = 'home'; ui.sheet = null;
+    history.replaceState(null, '', location.pathname);
+    render();
+  }
+
+  function onUpdate(p) {
+    ui.busy = false; // the server (or local engine) answered; accept input again
+    if (p.error) toast(p.error);
+    if (p.fatal) { ui.session = null; ui.payload = null; ui.screen = 'online'; render(); return; }
+    var v = p.view;
+    if (v) {
+      // keep only selections that are still in my hand and still my turn
+      var me = v.players[p.seat];
+      var ids = me && me.hand ? me.hand.map(function (c) { return c.id; }) : [];
+      ui.selected = ui.selected.filter(function (id) { return ids.indexOf(id) >= 0; });
+      if (!(v.phase === 'discard' && v.turn === p.seat)) ui.selected = [];
+      // highlight a newly drawn card
+      var added = ids.filter(function (id) { return ui.lastHandIds.indexOf(id) < 0; });
+      ui.newCardId = (added.length === 1 && ui.lastHandIds.length) ? added[0] : null;
+      ui.lastHandIds = ids;
+      noteAction(v);
+    }
+    ui.payload = p;
+    // keep the room in the address bar so a refresh rejoins the same seat
+    if (p.room && location.search !== '?room=' + p.room.code) history.replaceState(null, '', location.pathname + '?room=' + p.room.code);
+    render();
+  }
+
+  function noteAction(v) {
+    var a = v.lastAction;
+    if (!a) return;
+    var key = JSON.stringify(a) + v.round + v.turnsTaken;
+    if (key === ui.lastActionKey) return;
+    ui.lastActionKey = key;
+    ui.animatePile = true;
+    var name = function (i) { return esc(v.players[i].name); };
+    var line = null;
+    if (a.type === 'deal') line = 'Round ' + a.round + '. ' + (v.turn === ui.payloadSeat() ? 'You start.' : name(v.turn) + ' starts.');
+    else if (a.type === 'draw') line = name(a.player) + ' threw ' + shortList(a.threw || []) + (a.from === 'pile' ? ' and took ' + short(a.card) : ' and drew from the deck') + '.';
+    else if (a.type === 'slap') line = name(a.player) + ' slapped down ' + short(a.card) + '!';
+    if (line) { ui.log.unshift(line); ui.log = ui.log.slice(0, 3); }
+  }
+
+  ui.payloadSeat = function () { return ui.session && ui.session.seat; };
+
+  // ---------------------------------------------------------------- top-level render
+  function render() {
+    var p = ui.payload;
+    var html;
+    if (!ui.session) html = ({ home: homeScreen, setup: setupScreen, online: onlineScreen, cardart: cardArtScreen, rules: rulesScreen })[ui.screen]();
+    else if (!p) html = '<div class="center grow"><p class="muted">Connecting…</p><button class="btn" data-act="leave">Cancel</button></div>';
+    else if (p.mode === 'online' && p.room && p.room.phase === 'lobby') html = lobbyScreen(p);
+    else if (p.view) html = tableScreen(p);
+    else html = '<div class="center grow"><p class="muted">Loading…</p></div>';
+    if (ui.sheet && ui.session) html += sheetHtml();
+    app.innerHTML = html;
+    // play the slide-up animation only the first time a given overlay appears
+    var sheet = app.querySelector('.sheet');
+    var key = sheet ? (ui.sheet || '') + '|' + (p && p.view ? p.view.round + p.view.phase : '') : '';
+    if (sheet && key === ui.overlayKey) sheet.style.animation = 'none';
+    ui.overlayKey = key;
+  }
+
+  // ---------------------------------------------------------------- home
+  function homeScreen() {
+    var resume = S.LocalSession.hasSave();
+    var lastRoom = S.load('yaniv.lastRoom');
+    return '<h1 class="brand">Yaniv</h1><p class="tag">Get your hand down to ' + ui.rules.yanivMax + ' or less, then call it.</p>' +
+      '<div class="stack">' +
+      (resume ? '<button class="btn primary" data-act="resume">Resume game</button>' : '') +
+      '<button class="btn ' + (resume ? '' : 'primary') + '" data-act="go" data-to="setup">Play on this device</button>' +
+      '<button class="btn" data-act="go" data-to="online">Play online with friends</button>' +
+      (lastRoom && S.OnlineSession.tokenFor(lastRoom) && isServed()
+        ? '<button class="btn" data-act="rejoin" data-code="' + esc(lastRoom) + '">Rejoin game ' + esc(lastRoom) + '</button>' : '') +
+      '<div class="row"><button class="btn grow" data-act="go" data-to="rules">How to play</button>' +
+      '<button class="btn grow" data-act="go" data-to="cardart">Card art</button></div>' +
+      '</div>' +
+      '<p class="muted" style="text-align:center;margin-top:28px">On iPhone: Share → Add to Home Screen to install.</p>';
+  }
+  function isServed() { return location.protocol === 'http:' || location.protocol === 'https:'; }
+
+  // ---------------------------------------------------------------- local setup
+  function setupScreen() {
+    var rows = ui.setupPlayers.map(function (p, i) {
+      return '<div class="row">' +
+        '<input type="text" class="grow" data-field="pname" data-i="' + i + '" value="' + esc(p.name) + '" maxlength="16" aria-label="Player ' + (i + 1) + ' name">' +
+        '<select data-field="ptype" data-i="' + i + '" aria-label="Player type" style="width:auto">' +
+          '<option value="human"' + (p.type === 'human' ? ' selected' : '') + '>Person</option>' +
+          '<option value="easy"' + (p.type === 'cpu' && p.level === 'easy' ? ' selected' : '') + '>CPU easy</option>' +
+          '<option value="normal"' + (p.type === 'cpu' && p.level === 'normal' ? ' selected' : '') + '>CPU normal</option>' +
+          '<option value="hard"' + (p.type === 'cpu' && p.level === 'hard' ? ' selected' : '') + '>CPU hard</option>' +
+        '</select>' +
+        (ui.setupPlayers.length > 2 ? '<button class="icon-btn" data-act="rmPlayer" data-i="' + i + '" aria-label="Remove player">×</button>' : '') +
+        '</div>';
+    }).join('');
+    var humans = ui.setupPlayers.filter(function (p) { return p.type === 'human'; }).length;
+    return '<div class="top-bar"><button class="icon-btn" data-act="go" data-to="home" aria-label="Back">‹</button><h2>Play on this device</h2></div>' +
+      '<div class="stack">' +
+      '<div class="panel stack">' + rows +
+      (ui.setupPlayers.length < 8 ? '<button class="btn small" data-act="addPlayer">+ Add player</button>' : '') +
+      '<p class="muted" style="margin:0">' + (humans > 1 ? 'Pass and play: the screen hides your hand between people.' : humans === 1 ? 'You against the computer.' : 'Computers only: sit back and watch.') + '</p>' +
+      '</div>' +
+      rulesPanel() +
+      '<button class="btn primary" data-act="startLocal">Deal</button>' +
+      '</div>';
+  }
+
+  function rulesPanel(readOnly) {
+    var r = ui.rules;
+    var dis = readOnly ? ' disabled' : '';
+    function num(key, label, min, max) {
+      return '<label class="field">' + label + '<input type="number" inputmode="numeric" data-rule="' + key + '" min="' + min + '" max="' + max + '" value="' + r[key] + '"' + dis + '></label>';
+    }
+    return '<details class="panel"><summary>House rules</summary><div class="rules-grid">' +
+      num('yanivMax', 'Call Yaniv at or under', 0, 15) +
+      num('handSize', 'Cards dealt', 3, 7) +
+      num('assafPenalty', 'Assaf penalty', 0, 100) +
+      num('eliminateAbove', 'Out when over', 50, 1000) +
+      num('minRun', 'Shortest run', 3, 5) +
+      '<label class="field">Hitting 50, 100, 150…<select data-rule="fiftyRule"' + dis + '>' +
+        ['subtract', 'halve', 'none'].map(function (o) { return '<option value="' + o + '"' + (r.fiftyRule === o ? ' selected' : '') + '>' + ({ subtract: 'Take off 50', halve: 'Halve score', none: 'Nothing' })[o] + '</option>'; }).join('') +
+      '</select></label>' +
+      '<label class="check"><input type="checkbox" data-rule="slapDown"' + (r.slapDown ? ' checked' : '') + dis + '> Slap-down: drew the rank you just threw? Throw it too</label>' +
+      '<label class="check"><input type="checkbox" data-rule="noYanivFirstTurn"' + (r.noYanivFirstTurn ? ' checked' : '') + dis + '> No Yaniv before everyone has had a turn</label>' +
+      (readOnly ? '' : '<button class="btn small" data-act="resetRules" style="grid-column:1/-1">Reset to standard</button>') +
+      '</div></details>';
+  }
+
+  // ---------------------------------------------------------------- online menu + lobby
+  function onlineScreen() {
+    if (!isServed()) {
+      return '<div class="top-bar"><button class="icon-btn" data-act="go" data-to="home" aria-label="Back">‹</button><h2>Play online</h2></div>' +
+        '<div class="panel"><p>Online play needs the Yaniv server. This copy was opened as a file, so it can only play on this device.</p></div>';
+    }
+    return '<div class="top-bar"><button class="icon-btn" data-act="go" data-to="home" aria-label="Back">‹</button><h2>Play online</h2></div>' +
+      '<div class="stack">' +
+      '<label class="field">Your name<input type="text" data-field="myname" maxlength="16" value="' + esc(myName()) + '" placeholder="Name shown to others" autocomplete="nickname"></label>' +
+      '<div class="panel stack"><h3>Join a game</h3>' +
+        '<input type="text" class="code" data-field="joincode" maxlength="4" value="' + esc(ui.joinCode) + '" placeholder="CODE" autocapitalize="characters" autocomplete="off" aria-label="Room code">' +
+        '<button class="btn primary" data-act="join">Join</button></div>' +
+      '<div class="panel stack"><h3>Host a game</h3><p class="muted" style="margin:0">You get a 4-letter code to share. Add computer players to fill seats.</p>' +
+        '<button class="btn" data-act="create">Create game</button></div>' +
+      rulesPanel() +
+      '</div>';
+  }
+
+  function lobbyScreen(p) {
+    var room = p.room, host = p.seat === room.host;
+    var seats = room.seats.map(function (s, i) {
+      return '<div class="seat"><span class="dot' + (s.connected ? '' : ' off') + '"></span><span class="grow">' + esc(s.name) + (i === p.seat ? ' (you)' : '') + '</span>' +
+        (i === room.host ? '<span class="pill host">host</span>' : '') +
+        (s.type === 'cpu' ? '<span class="pill">CPU ' + esc(s.level) + '</span>' : '') +
+        (host && i !== p.seat ? '<button class="icon-btn" data-act="removeSeat" data-i="' + i + '" aria-label="Remove ' + esc(s.name) + '">×</button>' : '') + '</div>';
+    }).join('');
+    ui.rules = Object.assign({}, ui.rules, room.rules);
+    return '<div class="top-bar"><button class="icon-btn" data-act="leave" aria-label="Leave">‹</button><h2>Game room</h2></div>' +
+      (p.offline ? '<div class="offline">Reconnecting…</div>' : '') +
+      '<div class="stack">' +
+      '<div class="panel stack" style="align-items:center"><span class="muted">Room code</span><div class="code-big">' + esc(room.code) + '</div>' +
+        '<button class="btn small" data-act="share">Share invite link</button></div>' +
+      '<div class="panel"><h3 style="margin-bottom:4px">Players (' + room.seats.length + '/8)</h3>' + seats +
+        (host && room.seats.length < 8 ? '<div class="row" style="margin-top:10px"><select data-field="botlevel" style="width:auto"><option value="easy">Easy</option><option value="normal" selected>Normal</option><option value="hard">Hard</option></select><button class="btn small grow" data-act="addBot">+ Computer player</button></div>' : '') +
+      '</div>' +
+      rulesPanel(!host) +
+      (host ? '<button class="btn primary" data-act="startOnline"' + (room.seats.length < 2 ? ' disabled' : '') + '>Deal</button>'
+            : '<p class="muted" style="text-align:center">Waiting for ' + esc(room.seats[room.host] ? room.seats[room.host].name : 'the host') + ' to deal…</p>') +
+      '</div>';
+  }
+
+  // ---------------------------------------------------------------- the table
+  function tableScreen(p) {
+    var v = p.view, seat = p.seat, me = v.players[seat];
+    var n = v.players.length;
+    var actor = v.phase === 'slap' && v.slap ? v.slap.playerId : v.turn;
+    // While an online move is in flight, act as if it is not our turn so a double tap can't send twice.
+    var myTurn = v.phase === 'discard' && v.turn === seat && !ui.busy;
+    var top = v.discard[v.discard.length - 1];
+    var pickIds = E.pickableFrom(top).map(function (c) { return c.id; });
+    var selCards = ui.selected.map(function (id) { return me.hand.find(function (c) { return c.id === id; }); }).filter(Boolean);
+    var valid = myTurn && selCards.length && E.classifyGroup(selCards, v.rules);
+    var canYaniv = !ui.busy && !!(me.hand && E.canCallYaniv(v, seat));
+
+    // Pass-and-play: cover the screen until the right person is holding it.
+    if (p.passAndPlay && v.phase !== 'roundOver' && v.phase !== 'gameOver' && ui.shownSeat !== seat && v.players[actor].type === 'human') {
+      return '<div class="cover"><p class="muted">Round ' + v.round + '</p><h2>Pass to ' + esc(me.name) + '</h2>' +
+        '<p class="muted">Everyone else, look away.</p><button class="btn primary" data-act="reveal">I\'m ' + esc(me.name) + ', show my cards</button>' +
+        '<button class="btn small" data-act="menu">Menu</button></div>';
+    }
+
+    // opponents in seat order after me
+    var opps = '';
+    for (var k = 1; k < n; k++) {
+      var o = v.players[(seat + k) % n];
+      var count = o.hand ? o.hand.length : o.handCount;
+      var fan = ''; for (var c = 0; c < count; c++) fan += backHtml('mini');
+      var known = (o.known || []).map(function (kc) { return '<span class="card mini" title="Took ' + esc(T.label(kc)) + '">' + T.face(kc) + '</span>'; }).join('');
+      var seatInfo = p.room && p.room.seats[o.id];
+      opps += '<div class="opp' + (o.id === actor && !o.out ? ' turn' : '') + (o.out ? ' out' : '') + '">' +
+        '<div class="opp-name">' + (seatInfo && seatInfo.type === 'human' ? '<span class="dot' + (seatInfo.connected ? '' : ' off') + '"></span> ' : '') +
+        '<span class="' + (o.id === actor && o.type === 'cpu' && !o.out ? 'thinking' : '') + '">' + esc(o.name) + '</span></div>' +
+        '<div class="opp-meta"><span>' + (o.out ? 'out' : count + ' card' + (count === 1 ? '' : 's')) + '</span><span>' + o.score + ' pts</span></div>' +
+        '<div class="fan">' + fan + '</div>' + (known ? '<div class="known">' + known + '</div>' : '') + '</div>';
+    }
+
+    // centre: deck + discard
+    var fresh = ui.animatePile && v.lastAction && (v.lastAction.type === 'draw' || v.lastAction.type === 'slap' || v.lastAction.type === 'deal');
+    ui.animatePile = false; // re-renders (like selecting a card) must not replay the animation
+    var pileCards = top ? top.cards.map(function (c) {
+      var can = valid && pickIds.indexOf(c.id) >= 0;
+      return cardHtml(c, 'pile' + (can ? ' pickable' : '') + (fresh ? ' fresh' : ''), can ? 'data-act="drawPile" data-id="' + c.id + '"' : 'tabindex="-1" disabled');
+    }).join('') : '';
+    var deckBtn = '<button type="button" class="card pile' + (valid ? ' pickable' : '') + '" ' + (valid ? 'data-act="drawDeck"' : 'disabled') + ' aria-label="Draw from deck">' + T.back() + '</button>';
+
+    var log = ui.log.map(function (l, i) { return '<div class="' + (i === 0 ? 'now' : '') + '">' + l + '</div>'; }).join('');
+
+    // my hand
+    var handCards = sortHand(me.hand || []).map(function (c) {
+      var sel = ui.selected.indexOf(c.id) >= 0;
+      return cardHtml(c, (sel ? 'selected' : '') + (c.id === ui.newCardId ? ' new-in-hand' : ''), myTurn ? 'data-act="select" data-id="' + c.id + '" aria-pressed="' + sel + '"' : '');
+    }).join('');
+    var total = E.handValue(me.hand || []);
+
+    var hint = '';
+    if (me.out) hint = 'You are out. Watch the rest play.';
+    else if (myTurn) {
+      if (!selCards.length) hint = canYaniv ? 'You can call Yaniv! Or throw cards to keep going.' : 'Tap cards to throw: one card, a set, or a run of ' + v.rules.minRun + '+.';
+      else if (!valid) hint = 'That isn\'t a set or a same-suit run.';
+      else hint = 'Now tap the deck, or a glowing card on the pile to take it.';
+    } else if (v.phase === 'discard') hint = esc(v.players[v.turn].name) + '\'s turn';
+
+    var slapBanner = '';
+    if (v.phase === 'slap' && v.slap && v.slap.playerId === seat) {
+      var sc = me.hand.find(function (c) { return c.id === v.slap.cardId; });
+      slapBanner = '<div class="banner"><span class="grow">You drew ' + (sc ? short(sc).replace('suit-r', '') : 'a match') + '. Slap it down?</span>' +
+        '<button class="btn primary" data-act="slap">Slap</button><button class="btn" data-act="passSlap">Keep</button></div>';
+    }
+
+    return '<div class="table">' +
+      '<div class="table-head"><span class="round">Round ' + v.round + ' · out over ' + v.rules.eliminateAbove + (p.mode === 'online' && p.room ? ' · room ' + esc(p.room.code) : '') + '</span>' +
+        '<button class="icon-btn" data-act="sheet" data-sheet="scores" aria-label="Scores">☰</button></div>' +
+      (p.offline ? '<div class="offline">Connection lost. Reconnecting…</div>' : '') +
+      '<div class="opponents">' + opps + '</div>' +
+      '<div class="center">' +
+        '<div class="piles">' +
+          '<div class="pile-col"><div class="deck-stack">' + deckBtn + '</div><span class="pile-label">Deck · ' + v.deckCount + '</span></div>' +
+          '<div class="pile-col"><div class="discard-group">' + pileCards + '</div><span class="pile-label">Discard</span></div>' +
+        '</div>' +
+        '<div class="log">' + log + '</div>' +
+      '</div>' +
+      '<div class="me' + (myTurn ? ' turn' : '') + '">' + slapBanner +
+        '<div class="me-head"><b>' + esc(me.name) + '</b><span class="muted">' + me.score + ' pts</span><span class="grow"></span>' +
+          '<span class="muted">Hand</span><span class="total">' + total + '</span>' +
+          '<button class="btn small" data-act="sort" aria-label="Sort hand">' + (ui.sort === 'rank' ? 'By rank' : 'By suit') + '</button></div>' +
+        '<div class="hint">' + hint + '</div>' +
+        '<div class="hand' + ((me.hand || []).length > 6 ? ' many' : '') + '">' + handCards + '</div>' +
+        '<div class="actions"><button class="btn primary yaniv" data-act="yaniv"' + (canYaniv ? '' : ' disabled') + '>Yaniv!</button></div>' +
+      '</div>' +
+      '</div>' +
+      (v.phase === 'roundOver' || v.phase === 'gameOver' ? resultsOverlay(p) : '');
+  }
+
+  function resultsOverlay(p) {
+    var v = p.view, r = v.roundResult, seat = p.seat;
+    if (!r) return '';
+    var caller = v.players[r.caller];
+    var head = r.assaf
+      ? '<div class="result-big assaf">Assaf!</div><p style="text-align:center;margin:0 0 8px">' + esc(caller.name) + ' called Yaniv with ' + r.callerValue + ', but ' +
+        r.assafers.map(function (i) { return esc(v.players[i].name) + ' had ' + r.totals[i]; }).join(' and ') + '. +' + v.rules.assafPenalty + ' penalty.</p>'
+      : '<div class="result-big">Yaniv!</div><p style="text-align:center;margin:0 0 8px">' + esc(caller.name) + ' went out with ' + r.callerValue + '.</p>';
+    var order = v.players.map(function (pl) { return pl.id; }).sort(function (a, b) { return v.players[a].score - v.players[b].score; });
+    var rows = order.map(function (i) {
+      var pl = v.players[i];
+      if (r.deltas[i] === undefined) return '';
+      var note = [];
+      if (r.resets[i]) note.push('hit ' + r.resets[i].from + ' → ' + r.resets[i].to);
+      if (r.eliminated.indexOf(i) >= 0) note.push('knocked out');
+      return '<div class="res-row' + (i === r.winner ? ' win' : '') + '"><div><b>' + esc(pl.name) + (i === seat ? ' (you)' : '') + '</b>' +
+        (note.length ? ' <span class="tagline">' + note.join(', ') + '</span>' : '') +
+        '<div class="cards">' + r.hands[i].map(function (c) { return '<span class="card mini">' + T.face(c) + '</span>'; }).join('') + '</div></div>' +
+        '<div class="delta">+' + r.deltas[i] + '</div><div class="score">' + pl.score + '</div></div>';
+    }).join('');
+    var foot;
+    if (v.phase === 'gameOver') {
+      var w = v.players[v.winner];
+      var isHost = p.mode !== 'online' || (p.room && p.room.host === seat);
+      head = '<div class="result-big">' + esc(w.name) + ' wins!</div>' + head;
+      foot = (isHost ? '<button class="btn primary" data-act="again">Play again</button>' : '<p class="muted" style="text-align:center">The host can start another game.</p>') +
+        '<button class="btn" data-act="leave">Back to menu</button>';
+    } else {
+      foot = '<button class="btn primary" data-act="nextRound">Next round</button>';
+    }
+    return '<div class="overlay"><div class="sheet stack"><p class="muted" style="margin:0;text-align:center">Round ' + r.round + '</p>' + head + '<div>' + rows + '</div>' + foot + '</div></div>';
+  }
+
+  // ---------------------------------------------------------------- in-game sheets
+  function sheetHtml() {
+    var body = '';
+    if (ui.sheet === 'scores') {
+      var v = ui.payload && ui.payload.view;
+      if (v) {
+        body = '<h2>Scores</h2><table class="scores"><tr><th>Round</th>' + v.players.map(function (pl) { return '<th>' + esc(pl.name) + '</th>'; }).join('') + '</tr>' +
+          v.history.map(function (h) { return '<tr><td>' + h.round + '</td>' + v.players.map(function (pl) { return '<td>' + (h.deltas[pl.id] === undefined ? '—' : '+' + h.deltas[pl.id]) + '</td>'; }).join('') + '</tr>'; }).join('') +
+          '<tr><th>Total</th>' + v.players.map(function (pl) { return '<th>' + pl.score + (pl.out ? ' (out)' : '') + '</th>'; }).join('') + '</tr></table>';
+      }
+      body += '<div class="row"><button class="btn grow" data-act="sheet" data-sheet="rules">How to play</button><button class="btn grow" data-act="sheet" data-sheet="cardart">Card art</button></div>' +
+        '<button class="btn danger" data-act="leave">Leave game</button>';
+    } else if (ui.sheet === 'rules') body = rulesBody();
+    else if (ui.sheet === 'cardart') body = cardArtBody();
+    return '<div class="overlay" data-act="closeSheet"><div class="sheet stack" data-stop="1">' + body + '<button class="btn" data-act="closeSheet">Close</button></div></div>';
+  }
+
+  function rulesBody() {
+    var r = (ui.payload && ui.payload.view && ui.payload.view.rules) || ui.rules;
+    return '<h2>How to play</h2><div class="rules-text">' +
+      '<p><b>Goal:</b> keep your score low. Each round you try to get the points in your hand down to <b>' + r.yanivMax + ' or less</b> and call Yaniv.</p>' +
+      '<p><b>Card points:</b> Ace 1, 2–10 face value, J Q K 10.</p>' +
+      '<p><b>Your turn:</b> throw one card, a set of the same rank (7♠ 7♥), or a run of ' + r.minRun + '+ in one suit (4♦ 5♦ 6♦). Then take one card: from the deck, or one of the cards the last player threw. From a run you can only take an end card.</p>' +
+      (r.slapDown ? '<p><b>Slap-down:</b> if the card you draw from the deck matches the rank you just threw, you may throw it straight away.</p>' : '') +
+      '<p><b>Yaniv:</b> at the start of your turn, if your hand is ' + r.yanivMax + ' or less, call Yaniv. Everyone shows their hand. You score 0 and everyone else adds their hand.</p>' +
+      '<p><b>Assaf:</b> if anyone has the same or less than you, they score 0 and you add your hand plus ' + r.assafPenalty + '.</p>' +
+      (r.fiftyRule !== 'none' ? '<p><b>Lucky fifties:</b> land exactly on 50, 100, 150… and your score ' + (r.fiftyRule === 'halve' ? 'is halved' : 'drops by 50') + '.</p>' : '') +
+      '<p><b>Out:</b> go over ' + r.eliminateAbove + ' and you are out. Last player standing wins.</p>' +
+      '<p class="muted">Took-from-pile cards show under each player\'s name, because everyone saw them.</p></div>';
+  }
+  function rulesScreen() {
+    return '<div class="top-bar"><button class="icon-btn" data-act="go" data-to="home" aria-label="Back">‹</button><h2>How to play</h2></div><div class="panel">' + rulesBody().replace('<h2>How to play</h2>', '') + '</div>';
+  }
+
+  function cardArtBody() {
+    var list = T.list().map(function (t) {
+      return '<label class="check" style="grid-column:auto"><input type="radio" name="theme" data-field="theme" value="' + esc(t.id) + '"' + (T.activeId() === t.id ? ' checked' : '') + '> ' + esc(t.name) +
+        (t.id.indexOf('custom-') === 0 ? ' <button class="btn small danger" data-act="delDeck" data-id="' + esc(t.id) + '">Delete</button>' : '') + '</label>';
+    }).join('');
+    var sample = [{ id: 'AS', suit: 'S', rank: 1 }, { id: '7H', suit: 'H', rank: 7 }, { id: '10D', suit: 'D', rank: 10 }, { id: 'QC', suit: 'C', rank: 12 }, { id: 'KH', suit: 'H', rank: 13 }];
+    return '<h2>Card art</h2>' +
+      '<div class="stack">' + list + '</div>' +
+      '<div class="theme-preview">' + sample.map(function (c) { return '<span class="card">' + T.face(c) + '</span>'; }).join('') + '<span class="card">' + T.back() + '</span></div>' +
+      '<div class="panel stack"><h3>Use your own deck</h3>' +
+      '<p class="muted" style="margin:0">Pick up to 53 images, one per card, named like <b>AS.png</b>, <b>10H.png</b>, <b>QD.jpg</b>, <b>KC.png</b> (or <b>queen_of_hearts.png</b>) plus <b>back.png</b>. Portrait 5:7 works best. Cards you leave out use the classic look. Images stay on this device.</p>' +
+      '<input type="text" data-field="deckname" placeholder="Deck name" maxlength="24" value="My deck">' +
+      '<label class="btn" style="text-align:center">Choose images…<input type="file" accept="image/*" multiple data-field="deckfiles" hidden></label>' +
+      (ui.artMsg ? '<p class="muted" style="margin:0">' + ui.artMsg + '</p>' : '') + '</div>';
+  }
+  function cardArtScreen() {
+    return '<div class="top-bar"><button class="icon-btn" data-act="go" data-to="home" aria-label="Back">‹</button><h2>Card art</h2></div><div class="stack">' + cardArtBody().replace('<h2>Card art</h2>', '') + '</div>';
+  }
+
+  // ---------------------------------------------------------------- actions
+  var actions = {
+    go: function (el) { ui.screen = el.dataset.to; render(); },
+    addPlayer: function () {
+      var used = ui.setupPlayers.map(function (p) { return p.name; });
+      var name = ['Avi', 'Noa', 'Tal', 'Maya', 'Eli', 'Yael', 'Omer', 'Shira'].find(function (x) { return used.indexOf(x) < 0; }) || 'Player';
+      ui.setupPlayers.push({ name: name, type: 'cpu', level: 'normal' }); saveSetup(); render();
+    },
+    rmPlayer: function (el) { ui.setupPlayers.splice(+el.dataset.i, 1); saveSetup(); render(); },
+    resetRules: function () { ui.rules = Object.assign({}, E.DEFAULT_RULES); S.store('yaniv.rules', null); pushRules(); render(); },
+    startLocal: function () {
+      var players = ui.setupPlayers.map(function (p) { return { name: p.name.trim() || 'Player', type: p.type, level: p.level }; });
+      S.LocalSession.clearSave();
+      startSession(new S.LocalSession({ players: players, rules: ui.rules }));
+    },
+    resume: function () { startSession(S.LocalSession.resume()); },
+    create: function () {
+      if (!requireName()) return;
+      startSession(new S.OnlineSession({ name: myName(), rules: ui.rules }));
+    },
+    join: function () {
+      if (!requireName()) return;
+      var code = (ui.joinCode || '').toUpperCase().trim();
+      if (!/^[A-Z]{4}$/.test(code)) return toast('Enter the 4-letter room code.');
+      startSession(new S.OnlineSession({ name: myName(), code: code }));
+    },
+    rejoin: function (el) { startSession(new S.OnlineSession({ name: myName() || 'Player', code: el.dataset.code })); },
+    share: function () {
+      var code = ui.payload.room.code;
+      var url = location.origin + location.pathname + '?room=' + code;
+      var text = 'Join my Yaniv game! Code ' + code;
+      if (navigator.share) navigator.share({ title: 'Yaniv', text: text, url: url }).catch(function () {});
+      else if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { toast('Invite link copied'); });
+      else toast(url);
+    },
+    addBot: function () { var lvl = (app.querySelector('[data-field=botlevel]') || {}).value || 'normal'; ui.session.lobby({ t: 'addBot', level: lvl }); },
+    removeSeat: function (el) { ui.session.lobby({ t: 'removeSeat', seat: +el.dataset.i }); },
+    startOnline: function () { ui.session.lobby({ t: 'start' }); },
+    leave: function () {
+      if (ui.session && ui.session.mode === 'online') S.store('yaniv.lastRoom', null);
+      endSession();
+    },
+    select: function (el) {
+      var id = el.dataset.id, i = ui.selected.indexOf(id);
+      if (i >= 0) ui.selected.splice(i, 1); else ui.selected.push(id);
+      haptic(); render();
+    },
+    drawDeck: function () { play('deck'); },
+    drawPile: function (el) { play(el.dataset.id); },
+    yaniv: function () { haptic(); send({ type: 'yaniv' }); },
+    slap: function () { haptic(); send({ type: 'slap' }); },
+    passSlap: function () { send({ type: 'passSlap' }); },
+    nextRound: function () { send({ type: 'nextRound' }); },
+    again: function () {
+      var v = ui.payload.view;
+      if (ui.session.mode === 'online') { ui.session.lobby({ t: 'start' }); return; }
+      var players = v.players.map(function (p) { return { name: p.name, type: p.type, level: p.level }; });
+      S.LocalSession.clearSave();
+      startSession(new S.LocalSession({ players: players, rules: v.rules }));
+    },
+    sort: function () { ui.sort = ui.sort === 'rank' ? 'suit' : 'rank'; S.store('yaniv.sort', ui.sort); render(); },
+    reveal: function () { ui.shownSeat = ui.payload.seat; ui.selected = []; render(); },
+    sheet: function (el) { ui.sheet = el.dataset.sheet; render(); },
+    menu: function () { ui.sheet = 'scores'; render(); },
+    closeSheet: function () { ui.sheet = null; render(); },
+    delDeck: function (el) { T.deleteDeck(el.dataset.id).then(function () { S.store('yaniv.theme', T.activeId()); render(); }); }
+  };
+
+  function send(action) {
+    if (ui.busy) return;
+    ui.busy = true;
+    ui.session.act(action);
+    if (ui.busy) render(); // still waiting on the server: show the locked state
+  }
+  function play(source) {
+    haptic();
+    var cards = ui.selected.slice();
+    ui.selected = [];
+    send({ type: 'play', cards: cards, source: source });
+  }
+  function requireName() {
+    var n = myName().trim();
+    if (!n) { toast('Enter your name first.'); var f = app.querySelector('[data-field=myname]'); if (f) f.focus(); return false; }
+    return true;
+  }
+  function saveSetup() { S.store('yaniv.setup', ui.setupPlayers); }
+  function pushRules() {
+    S.store('yaniv.rules', ui.rules);
+    if (ui.session && ui.session.mode === 'online' && ui.payload && ui.payload.room && ui.payload.room.phase === 'lobby') ui.session.lobby({ t: 'rules', rules: ui.rules });
+  }
+
+  document.addEventListener('click', function (ev) {
+    var el = ev.target.closest('[data-act]');
+    if (!el) return;
+    // clicks inside a sheet shouldn't hit the overlay's close handler
+    if (el.dataset.act === 'closeSheet' && el.classList.contains('overlay') && ev.target.closest('[data-stop]')) return;
+    if (el.disabled) return;
+    var fn = actions[el.dataset.act];
+    if (fn) { ev.preventDefault(); fn(el); }
+  });
+
+  document.addEventListener('input', function (ev) {
+    var el = ev.target;
+    if (el.dataset.field === 'pname') { ui.setupPlayers[+el.dataset.i].name = el.value; saveSetup(); }
+    if (el.dataset.field === 'myname') S.store('yaniv.name', el.value.trim());
+    if (el.dataset.field === 'joincode') { el.value = el.value.toUpperCase().replace(/[^A-Z]/g, ''); ui.joinCode = el.value; }
+  });
+
+  document.addEventListener('change', function (ev) {
+    var el = ev.target;
+    if (el.dataset.field === 'ptype') {
+      var p = ui.setupPlayers[+el.dataset.i];
+      if (el.value === 'human') { p.type = 'human'; delete p.level; } else { p.type = 'cpu'; p.level = el.value; }
+      saveSetup(); render();
+    }
+    if (el.dataset.rule) {
+      var k = el.dataset.rule;
+      if (el.type === 'checkbox') ui.rules[k] = el.checked;
+      else if (el.type === 'number') {
+        var lo = +el.min, hi = +el.max, val = Math.round(+el.value);
+        ui.rules[k] = isFinite(val) ? Math.max(lo, Math.min(hi, val)) : E.DEFAULT_RULES[k];
+        el.value = ui.rules[k];
+      } else ui.rules[k] = el.value;
+      pushRules();
+      if (!ui.session) render();
+    }
+    if (el.dataset.field === 'theme') { T.use(el.value); S.store('yaniv.theme', el.value); render(); }
+    if (el.dataset.field === 'deckfiles' && el.files.length) {
+      var nameEl = app.querySelector('[data-field=deckname]');
+      var deckName = (nameEl && nameEl.value.trim()) || 'My deck';
+      ui.artMsg = 'Loading…'; render();
+      T.importDeck(deckName, el.files).then(function (res) {
+        T.use(res.id); S.store('yaniv.theme', res.id);
+        ui.artMsg = 'Loaded ' + res.matched.length + ' of 53 images.' + (res.skipped.length ? ' Skipped (name not recognised): ' + esc(res.skipped.slice(0, 6).join(', ')) + (res.skipped.length > 6 ? '…' : '') : '');
+        render();
+      });
+    }
+  });
+
+  // iOS: stop double-tap zoom on fast card taps
+  var lastTouch = 0;
+  document.addEventListener('touchend', function (e) {
+    var now = Date.now();
+    if (now - lastTouch < 300 && e.target.closest('.card, .btn')) e.preventDefault();
+    lastTouch = now;
+  }, { passive: false });
+
+  // ---------------------------------------------------------------- boot
+  T.loadSavedDecks().then(function () {
+    var saved = S.load('yaniv.theme');
+    if (saved) T.use(saved);
+    var params = new URLSearchParams(location.search);
+    var room = params.get('room');
+    if (room) {
+      ui.joinCode = room.toUpperCase().slice(0, 4);
+      ui.screen = 'online';
+      // a refresh (or reopening the app) puts you straight back in your seat
+      if (S.OnlineSession.tokenFor(ui.joinCode)) { startSession(new S.OnlineSession({ name: myName() || 'Player', code: ui.joinCode })); return; }
+    }
+    render();
+  });
+  render();
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Render Blueprint: in Render choose New > Blueprint and pick this repo.
+services:
+  - type: web
+    name: yaniv
+    runtime: node
+    plan: free
+    rootDir: yaniv
+    buildCommand: npm ci --omit=dev
+    startCommand: node server/server.js
+    healthCheckPath: /healthz
+    autoDeploy: true
