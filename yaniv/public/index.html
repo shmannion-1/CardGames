@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yaniv</title>
+<meta name="description" content="Yaniv card game for game night: play the computer, pass one phone around, or play online with friends.">
+<meta name="theme-color" content="#0f3d2e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Yaniv">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="app" aria-live="polite"></main>
+<div id="toast" role="status" aria-live="assertive"></div>
+<script src="js/engine.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/session.js"></script>
+<script src="js/ui.js"></script>
+<script>
+  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+  }
+</script>
+</body>
+</html>

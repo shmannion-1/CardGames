@@ -1,0 +1,13 @@
+{
+  "name": "yaniv",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Yaniv card game for the web and iPhone, with online rooms",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test test/*.test.js",
+    "build:offline": "node tools/build-offline.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0" }
+}
